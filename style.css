@@ -2,9 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: rgb(233, 233, 233);
 }
 html,
 body {
   height: 100%;
   width: 100%;
+  background-color: rgb(21, 21, 21);
+  text-align: center;
+}
+.btn {
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  border: 10px solid white;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
 }

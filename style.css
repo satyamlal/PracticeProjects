@@ -21,8 +21,11 @@ body {
 }
 
 .btn-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 2.5rem;
   justify-content: center;
+  align-items: center;
 }
 
 .pink {

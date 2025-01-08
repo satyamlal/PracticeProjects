@@ -7,6 +7,7 @@ const h2 = document.querySelector("h2");
 
 let started = false;
 let level = 0;
+let gameOver = false;
 
 document.addEventListener("keypress", function () {
   if (!started) {
@@ -15,22 +16,27 @@ document.addEventListener("keypress", function () {
     level = 0;
     gameSeq = [];
     userSeq = [];
+    gameOver = false;
     levelUp();
   }
 });
 
 document.querySelectorAll(".btn").forEach((btn) => {
   btn.addEventListener("click", function () {
-    let clickedColor = this.classList[1];
-    userSeq.push(clickedColor);
-    btnFlash(this);
-    checkAnswer(userSeq.length - 1);
+    if (started && !gameOver) {
+      let clickedColor = this.classList[1];
+      userSeq.push(clickedColor);
+      btnFlash(this);
+      checkAnswer(userSeq.length - 1);
+    }
   });
 });
 
 function btnFlash(btn) {
-  btn.classList.add("flash");
-  setTimeout(() => btn.classList.remove("flash"), 300);
+  if (started && !gameOver) {
+    btn.classList.add("flash");
+    setTimeout(() => btn.classList.remove("flash"), 300);
+  }
 }
 
 function levelUp() {
@@ -54,5 +60,6 @@ function checkAnswer(currentLevel) {
   } else {
     h2.textContent = "Game Over! Press any key to restart.";
     started = false;
+    gameOver = true;
   }
 }

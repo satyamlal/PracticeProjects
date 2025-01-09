@@ -5,6 +5,8 @@ Each project is organized in separate folders for better clarity and version con
 
 ## Projects List
 
+### Front-End Projects
+
 - SimonSays Game (HTML, CSS, JavaScript)
 - Calculator App (HTML, CSS, JavaScript)
 - To Do List App (HTML, CSS, JavaScript)

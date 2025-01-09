@@ -58,7 +58,7 @@ function checkAnswer(currentLevel) {
       userSeq = [];
     }
   } else {
-    h2.textContent = "Game Over! Press any key to restart.";
+    h2.textContent = "Game Over! Press any key to Restart.";
     started = false;
     gameOver = true;
   }

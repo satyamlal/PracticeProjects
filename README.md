@@ -13,6 +13,10 @@ Each project is organized in separate folders for better clarity and version con
 - Notes App (HTML, CSS, JavaScript)
 - Weather App (HTML, CSS, JavaScript)
 
+### Front-End Projects
+
+- CRUD app
+
 ## How to Contribute
 
 Feel free to fork this repository and submit a pull request if you want to contribute more projects.

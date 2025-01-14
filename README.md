@@ -13,7 +13,7 @@ Each project is organized in separate folders for better clarity and version con
 - Notes App (HTML, CSS, JavaScript)
 - Weather App (HTML, CSS, JavaScript)
 
-### Front-End Projects
+### Back-End Projects
 
 - CRUD app
 

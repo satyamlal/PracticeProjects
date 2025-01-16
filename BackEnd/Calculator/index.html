@@ -11,6 +11,7 @@
   <body>
     <div class="container">
       <input
+        oninput="calculateSum()"
         type="number"
         name="fnum"
         id="fnum"
@@ -18,15 +19,16 @@
         placeholder="First Number"
       /><br /><br />
       <input
+        oninput="calculateSum()"
         type="number"
         name="snum"
         id="snum"
         class="sbox"
         placeholder="Second Number"
       /><br /><br />
-      <button onclick="calculateSum()" class="calculate-btn" id="sumIt">
+      <!-- <button oninput="calculateSum()" class="calculate-btn" id="sumIt">
         Calculate
-      </button>
+      </button> -->
       <div id="finalSum">Output Here!</div>
     </div>
     <script src="script.js"></script>

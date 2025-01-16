@@ -3,7 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <input
+      id="firstNum"
+      class="container"
+      type="text"
+      placeholder="First Number"
+    /><br /><br />
+    <input
+      id="secondNum"
+      class="container"
+      type="text"
+      placeholder="Second Number"
+    /><br /><br />
+    <button onclick="populateDiv()">Calculate</button><br /><br />
+    <div id="finalSum"></div>
+    <script src="script.js"></script>
+  </body>
 </html>

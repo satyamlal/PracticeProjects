@@ -9,7 +9,7 @@ function debounceCalculateSum() {
   setTimeout(() => {
     //wait for 200ms and then call the function calculateSum
     timeout = calculateSum;
-  }, 200);
+  }, 1000);
 }
 
 //Calculating the sum by explicitly making the function async
@@ -24,15 +24,18 @@ async function calculateSum() {
 }
 
 // Calculating the sum using fetch
+// we can use 2nd .then inside the 1st .then but that if we continue to do that,
+// that will create a callback hell and that's not a good way, so we used both .then one after another to make the code more clean
+
 // function calculateSum() {
 //   const fnum = document.querySelector("fnum").value;
 //   const snum = document.querySelector("snum").value;
 
-//   fetch("https://sum-server.100xdevs.com/sum?a=" + fnum + "&b=" + snum).then(
-//     (response) => {
-//       response.text().then((ans) => {
-//         finalSum.innerHTML = ans;
-//       });
-//     }
-//   );
+//   fetch("https://sum-server.100xdevs.com/sum?a=" + fnum + "&b=" + snum)
+//     .then((response) => {
+//       return response.text();
+//     })
+//     .then((ans) => {
+//       finalSum.innerHTML = ans;
+//     });
 // }

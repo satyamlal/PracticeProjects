@@ -1,0 +1,34 @@
+<!-- This Calculator hits the backend server to calculated the given inputs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back-End Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <input
+        type="number"
+        name="fnum"
+        id="fnum"
+        class="fbox"
+        placeholder="First Number"
+      /><br /><br />
+      <input
+        type="number"
+        name="snum"
+        id="snum"
+        class="sbox"
+        placeholder="Second Number"
+      /><br /><br />
+      <button onclick="calculateSum()" class="calculate-btn" id="sumIt">
+        Calculate
+      </button>
+      <div id="finalSum">Output Here!</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

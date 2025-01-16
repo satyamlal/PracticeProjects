@@ -1,0 +1,47 @@
+/* This Calculator hits the backend server to calculated the given inputs */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  margin-top: -200px;
+}
+
+.fbox,
+.sbox {
+  font-size: large;
+  height: 35px;
+  width: 250px;
+  text-align: center;
+  gap: 5px;
+}
+
+.calculate-btn {
+  font-size: medium;
+  padding: 8px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #fcd9a2;
+  color: black;
+  border-radius: 5px;
+  text-align: center;
+}

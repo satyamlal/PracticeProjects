@@ -21,6 +21,7 @@ function addTask() {
     li.appendChild(span);
   }
   inputBox.value = "";
+  saveData();
 }
 
 listContainer.addEventListener(
@@ -31,6 +32,7 @@ listContainer.addEventListener(
       const parentLi = e.target.closest("li");
       if (parentLi) {
         parentLi.remove();
+        saveData();
       }
       return; // Exit early to prevent toggling the checked class.
     }
@@ -40,7 +42,18 @@ listContainer.addEventListener(
     const li = e.target.closest("li");
     if (li && listContainer.contains(li)) {
       li.classList.toggle("checked");
+      saveData();
     }
   },
   false
 );
+
+function saveData() {
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showTask() {
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+
+showTask();

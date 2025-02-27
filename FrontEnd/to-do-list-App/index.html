@@ -12,9 +12,10 @@
         <h2>To Do List App <img src="images/icon.png" /></h2>
         <div class="row">
           <input type="text" id="input-box" placeholder="Your Text Here" />
-          <button>Add</button>
+          <button onclick="addTask()">Add</button>
         </div>
-        <ul>
+        <p class="error">You must write something!!!</p>
+        <ul id="list-container">
           <!-- <li class="checked">Task 1</li>
           <li class="checked">Task 2</li>
           <li class="checked">Task 3</li>

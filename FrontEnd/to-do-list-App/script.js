@@ -23,3 +23,24 @@ function addTask() {
   inputBox.value = "";
 }
 
+listContainer.addEventListener(
+  "click",
+  function (e) {
+    // If a span (the cross button) is clicked, remove its parent <li> and exit.
+    if (e.target.tagName === "SPAN") {
+      const parentLi = e.target.closest("li");
+      if (parentLi) {
+        parentLi.remove();
+      }
+      return; // Exit early to prevent toggling the checked class.
+    }
+
+    // Otherwise, if a list item or any of its children (other than span) is clicked,
+    // toggle the "checked" class to apply a strike-through.
+    const li = e.target.closest("li");
+    if (li && listContainer.contains(li)) {
+      li.classList.toggle("checked");
+    }
+  },
+  false
+);
